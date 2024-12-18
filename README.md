@@ -4,6 +4,7 @@ A user-friendly document analysis tool built with Streamlit and Microsoft's Mark
 
 ![Document Analyzer Demo](https://github.com/lesteroliver911/doc-markdown/blob/main/ms_markitdown_git.mp4)
 
+
 ## ✨ Features
 
 - **Multi-Format Support**: Analyze a wide range of document formats including PDF, PPTX, DOCX, XLSX, images, audio files, and more
@@ -75,9 +76,11 @@ The application can be configured using environment variables or through the UI:
 - Cache management with built-in clearing functionality
 
 
-## 📝 License
+## 📝 License & MS Repo
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Orginal MS Markitdown repo: https://github.com/microsoft/markitdown
 
 ## 🙏 Acknowledgments
 
