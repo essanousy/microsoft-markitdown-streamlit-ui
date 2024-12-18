@@ -2,7 +2,7 @@
 
 A user-friendly document analysis tool built with Streamlit and Microsoft's MarkItDown technology. This application enables users to extract and analyze content from various document formats with optional GPT-4o enhancement for image descriptions.
 
-![Document Analyzer Demo](https://github.com/lesteroliver911/doc-markdown/blob/main/misc/doc-markdown-ms.jpg)
+![Document Analyzer Demo](https://github.com/lesteroliver911/microsoft-markitdown-streamlit-ui/blob/main/misc/doc-markdown-ms.jpg)
 
 
 ## ✨ Features
@@ -25,7 +25,7 @@ A user-friendly document analysis tool built with Streamlit and Microsoft's Mark
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/lesteroliver911/doc-markdown.git
+git clone https://github.com/lesteroliver911/microsoft-markitdown-streamlit-ui.git
 cd document-analyzer
 ```
 
