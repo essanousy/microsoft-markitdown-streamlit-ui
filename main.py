@@ -115,17 +115,14 @@ def image_to_data_uri(pil_img):
     return f"data:image/png;base64,{img_str}"
 
 def describe_image_with_llm(llm_client, llm_model, pil_img):
-    buffered = tempfile.TemporaryFile()
-    pil_img.save(buffered, format="PNG")
-    buffered.seek(0)
-    img_str = base64.b64encode(buffered.read()).decode("utf-8")
+    with tempfile.TemporaryFile() as buffered:
+        pil_img.save(buffered, format="PNG")
+        buffered.seek(0)
+        img_str = base64.b64encode(buffered.read()).decode("utf-8")
+    
     data_uri = f"data:image/png;base64,{img_str}"
 
     messages = [
-        {
-            "role": "system",
-            "content": "you are a document processor. avoid using words like 'you' or having conversations, instead simply discuss facts as requested."
-        },
         {
             "role": "user",
             "content": [
