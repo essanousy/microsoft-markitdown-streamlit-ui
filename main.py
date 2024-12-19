@@ -1,3 +1,27 @@
+"""
+Document Analyzer with Microsoft MarkItDown and LLM-based Image Description
+
+This Streamlit application allows users to upload documents (including PDFs) and have their 
+contents extracted, analyzed, and optionally enhanced by a Large Language Model (LLM). 
+If enabled, embedded images in PDF pages can be individually extracted and described by 
+the LLM, integrating figure references seamlessly into the extracted text.
+
+Features:
+- Supports various file formats: PDF, PPTX, DOCX, XLSX, images, audio, HTML, CSV, JSON, XML
+- Extracts text content from uploaded documents via MarkItDown
+- Integrates with both local LLMs (via a custom LocalLLMClient) and the OpenAI API (e.g., GPT-4)
+- If LLM is enabled and the document is a PDF, it:
+  - Uses pdfplumber to extract text and image positions from pages
+  - Extracts and describes embedded images individually
+  - Inserts figure references and LLM-generated captions inline with the extracted text
+
+Installation and Requirements:
+1. Python 3.8 or newer is recommended.
+2. Install Streamlit:
+   ```bash
+   pip install streamlit
+"""
+
 import streamlit as st
 import os
 from markitdown import MarkItDown
@@ -6,7 +30,6 @@ import tempfile
 from dotenv import load_dotenv
 import requests
 from types import SimpleNamespace
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import pdfplumber
 from PIL import Image
 import base64
