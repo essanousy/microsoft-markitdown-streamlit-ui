@@ -1,0 +1,6 @@
+streamlit
+markitdown
+python-dotenv
+requests
+pdfplumber
+Pillow

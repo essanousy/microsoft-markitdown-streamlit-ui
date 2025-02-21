@@ -340,7 +340,7 @@ def main():
                     st.download_button(
                         "Download Extracted Content",
                         text_content,
-                        file_name=f"{uploaded_file.name}_extracted.txt",
+                        file_name=f"{uploaded_file.name}_extracted.md",
                         mime="text/plain"
                     )
                 

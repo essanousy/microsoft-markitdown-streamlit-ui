@@ -26,7 +26,6 @@ A user-friendly document analysis tool built with Streamlit and Microsoft's Mark
 1. Clone the repository:
 ```bash
 git clone https://github.com/lesteroliver911/microsoft-markitdown-streamlit-ui.git
-cd document-analyzer
 ```
 
 2. Install required packages:
@@ -34,7 +33,7 @@ cd document-analyzer
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables:
+3. Set up environment variables (optional):
 ```bash
 # Create .env file
 touch .env
@@ -45,7 +44,7 @@ echo "OPENAI_API_KEY=your_api_key_here" >> .env
 
 4. Run the application:
 ```bash
-streamlit run app.py
+streamlit run main.py
 ```
 
 ## 💻 Usage
